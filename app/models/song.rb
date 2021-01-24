@@ -1,5 +1,5 @@
 class Song < ApplicationRecord
-  #validates :title, presence: true
+  validates :title, presence: true
   validates :released, acceptance: { accept: [true, false] }
   validate :validate_release_year
   validate :unique_this_year?
